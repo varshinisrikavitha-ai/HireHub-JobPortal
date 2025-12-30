@@ -36,3 +36,101 @@
     transform: rotate(360deg);
   }
 }
+
+/* Body Background for Dark/Light Mode */
+.bg-light {
+  background: #f8f9fa; /* Light mode body */
+}
+
+.bg-dark {
+  background: #121212; /* Dark mode body */
+}
+
+/* Job Card Hover Animation (Solid Gradient, No Glass) */
+.job-card.hover-gradient {
+  border-radius: 12px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.job-card.hover-gradient:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Gradient Animation for Cards (Optional) */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Buttons Gradient Hover Animation */
+.btn-hover-gradient {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.btn-hover-gradient:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Apply Button Gradient */
+.btn-apply {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-weight: 500;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.btn-apply:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* Search Inputs */
+.search-input:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-1px);
+}
+
+.search-input:focus {
+  box-shadow: 0 0 8px rgba(0,123,255,0.7);
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Placeholder Text Colors */
+.search-input::placeholder {
+  color: #999; /* Light gray in light mode */
+  opacity: 1;  /* Ensure full opacity */
+}
+
+.bg-dark .search-input::placeholder {
+  color: #ffffff; /* White in dark mode */
+}
+
+/* Role Indicator Styling */
+.role-indicator {
+  min-width: 100px;
+  text-align: center;
+}
+
+/* Navbar Button Spacing */
+.navbar .btn {
+  transition: all 0.3s;
+}
+
+.navbar .btn:hover {
+  transform: translateY(-2px);
+}
